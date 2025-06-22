@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Vendas - Pendura Aí</title>
+  <link rel="icon" type="image/png" href="images/icone_logo.jpg">
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 1s ease forwards; }
+    @keyframes fadeInUp { to { opacity: 1; transform: none; } }
+    .header { background: #0033a0; color: #fff; padding: 50px 20px; text-align: center; }
+    .header h1 { margin: 0 0 10px; font-size: 3em; }
+    .header p { font-size: 1.2em; line-height: 1.6em; max-width: 800px; margin: 0 auto 10px; }
+    .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    .hero-img { width: 100%; max-width: 900px; display: block; margin: 0 auto 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 40px; }
+    .feature { background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); transition: transform 0.3s ease; }
+    .feature:hover { transform: translateY(-5px); }
+    .feature h3 { margin-top: 0; color: #0033a0; font-size: 1.3em; }
+    .demo, .promo { text-align: center; border-radius: 10px; margin: 50px auto; padding: 30px 20px; max-width: 700px; box-shadow: 0 3px 12px rgba(0,0,0,0.1); }
+    .demo { background: #ffe600; color: #003; }
+    .promo { background: #e60000; color: #fff; }
+    .promo h2 { font-size: 2em; margin-bottom: 10px; }
+    .cta { text-align: center; margin: 40px 0; }
+    .cta a { background: #25d366; color: #fff; text-decoration: none; padding: 15px 40px; border-radius: 50px; font-size: 1.2em; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: background 0.3s; }
+    .cta a:hover { background: #1da851; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 50px; }
+    .gallery img { width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+    .gallery img:hover { transform: scale(1.03); }
+    .download-box { background: #fff; border: 2px solid #0033a0; border-radius: 12px; padding: 25px; max-width: 320px; text-align: center; margin: 60px auto; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+    .download-box img { width: 64px; height: 64px; margin-bottom: 15px; }
+    .download-box a { display: inline-block; margin-top: 15px; background: #0033a0; color: #fff; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+    .download-box a:hover { background: #002080; }
+    .highlight { background: #dff0d8; border-left: 5px solid #3c763d; padding: 15px; margin-top: 30px; font-weight: bold; text-align: center; border-radius: 8px; }
+    .contact-form { background: #fff; border: 2px solid #0033a0; border-radius: 12px; padding: 25px; max-width: 600px; margin: 40px auto; box-shadow: 0 3px 12px rgba(0,0,0,0.1); }
+    .contact-form h2 { text-align: center; color: #0033a0; }
+    .contact-form form { display: flex; flex-direction: column; gap: 15px; }
+    .contact-form input, .contact-form textarea { padding: 12px; font-size: 1em; border: 1px solid #ccc; border-radius: 6px; }
+    .contact-form button { background: #0033a0; color: #fff; padding: 12px; border: none; border-radius: 6px; font-size: 1em; cursor: pointer; transition: background 0.3s; }
+    .contact-form button:hover { background: #002080; }
+    footer { background: #333; color: #ddd; text-align: center; padding: 25px; font-size: 0.95em; }
+    footer a { color: #25d366; text-decoration: none; }
+    @media (max-width: 600px) {
+      .header h1 { font-size: 2em; }
+      .cta a { padding: 12px 20px; font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header fade-in">
+    <h1>ATENÇÃO COMERCIANTES!</h1>
+    <p>Controle suas vendas à vista e a prazo de forma simplificada e eficiente</p>
+    <p>Você ainda anota vendas no caderninho? 😬 Está difícil controlar os fiados, saber o que entrou no caixa ao final do dia, quinzena ou mês?</p>
+    <p>💻 Apresento o Sistema de Vendas Simples e Eficiente</p>
+    <p>👉 Criado para facilitar qualquer negócio: mercadinhos, papelarias, oficinas, lojinhas, studios de beleza, barbearias, adegas e muito mais!</p>
+  </header>
+
+  <div class="container">
+    <img class="hero-img fade-in" src="images/banner.jpg" alt="Anúncio do Sistema de Vendas">
+
+    <header class="header" style="background: transparent; color: #0033a0; padding: 10px 0 0;">
+      <h1 style="font-size: 2em;">PENDURA AÍ</h1>
+    </header>
+
+    <div class="features">
+      <div class="feature fade-in">
+        <h3>✅ Vendas à vista e a prazo</h3>
+        <p>Registre suas vendas e acompanhe recebimentos sem complicação.</p>
+      </div>
+      <div class="feature fade-in">
+        <h3>✅ Cadastro de clientes e fiados</h3>
+        <p>Mantenha seu controle de fiados organizado e evite perdas.</p>
+      </div>
+      <div class="feature fade-in">
+        <h3>✅ Relatórios de faturamento</h3>
+        <p>Gere relatórios claros para ter visão completa do seu negócio.</p>
+      </div>
+      <div class="feature fade-in">
+        <h3>✅ Super leve e fácil de usar</h3>
+        <p>Roda em qualquer computador com Windows, sem mensalidades abusivas.</p>
+      </div>
+      <div class="feature fade-in">
+        <h3>✅ Sem controle de estoque</h3>
+        <p>Venda direto, sem perder tempo cadastrando produtos um a um.</p>
+      </div>
+    </div>
+
+    <div class="highlight fade-in">
+      🔄 Sem a complexidade de controle de estoque — comece a vender imediatamente!
+    </div>
+
+    <div class="gallery">
+      <img src="images/tela principal.jpg" alt="Tela do sistema 1">
+      <img src="images/login.jpg" alt="Tela do sistema 2">
+      <img src="images/cadastros.jpg" alt="Tela do sistema 3">
+      <img src="images/vendas_prazo.jpg" alt="Tela do sistema 4">
+      <img src="images/vendas_vista.jpg" alt="Tela do sistema 5">
+      <img src="images/consulta.jpg" alt="Tela do sistema 6">
+      <img src="images/backup.jpg" alt="Tela do sistema 7">
+      <img src="images/sobre.jpg" alt="Tela do sistema 8">
+    </div>
+
+    <div class="demo fade-in">
+      <h2>VERSÃO DEMO GRÁTIS POR 30 DIAS!</h2>
+      <p>Experimente todas as funcionalidades sem custo e com suporte direto.</p>
+    </div>
+
+    <div class="promo fade-in">
+      <h2>PROMOÇÃO</h2>
+      <p>De <del>R$ 500,00</del> por <strong>R$ 300,00</strong></p>
+      <p><strong>Licença Anual</strong></p>
+    </div>
+
+    <div class="cta fade-in">
+      <a href="https://wa.me/5511910973182" target="_blank">WhatsApp: (11) 91097-3182</a>
+    </div>
+
+    <div class="download-box fade-in">
+      <p><strong>1° Acesso:</strong></p>
+      <p>Usuário: MASTER</p>
+      <p>Senha: 123456</p>
+      <img src="images/download.jpg" alt="Ícone de download">
+      <p><strong>Baixe o sistema Pendura Aí agora:</strong></p>
+      <a href="downloads/PenduraAI.zip" download>Download .ZIP</a>
+    </div>
+
+    <div class="contact-form">
+      <h2>📬 Entre em Contato</h2>
+      <form action="mailto:mk_contato@mkdigitalinformatica.com.br" method="POST" enctype="text/plain">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
+        <button type="submit">Enviar mensagem</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>Sistema de Vendas "Pendura Aí" &bull; Licença anual com suporte direto</p>
+    <p>&copy; 2025 Marcos Sena</p>
+  </footer>
+</body>
+</html>
